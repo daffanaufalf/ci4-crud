@@ -30,8 +30,11 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/fti', 'budiluhur::method_fti');
-$routes->get('/fikom', 'budiluhur::method_fikom');
+$routes->get('/hello', 'Hello::index');
+$routes->get('/hello/about', 'Hello::about');
+$routes->get('/coba', 'Home::coba');
+$routes->get('/profile1/(:any)', 'Hello::profile1/$1');
+$routes->get('/profile2/(:any)/(:num)', 'Hello::profile2/$1/$2');
 
 /*
  * --------------------------------------------------------------------
